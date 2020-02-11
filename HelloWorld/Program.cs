@@ -23,6 +23,9 @@ namespace HelloWorld
             // 3. Resolve dependency
             IOutput output = Container.Resolve<IOutput>();
 
+            // Manual instantiation of classes
+            //var output = new ConsoleOutput( new Environment() );
+
             output.WriteLine("Hello World!");
             Console.ReadKey();
         }
