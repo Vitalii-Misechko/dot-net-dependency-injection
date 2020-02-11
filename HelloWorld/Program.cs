@@ -10,13 +10,14 @@ namespace HelloWorld
 
         static void Main( string[] args )
         {
+            // 1a. Start creation of a new Container
             var builder = new ContainerBuilder();
 
             // 2. Register types / Configure container
             builder.RegisterType<ConsoleOutput>().As<IOutput>();
             builder.RegisterType<Environment>().As<IEnvironment>();
 
-            // 1. Create a new Container
+            // 1b. Finish creation of a new Container
             Container = builder.Build();
 
             // 3. Resolve dependency
