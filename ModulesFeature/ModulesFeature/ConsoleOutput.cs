@@ -16,5 +16,11 @@ namespace ModulesFeature
         {
             Console.WriteLine( $"{ m_environment.MachineName() } > { line }" );
         }
+
+        string IOutput.FormatLine( string line ) 
+        {
+            return $"{ m_environment.MachineName() } > { line }";
+        }
+
     }
 }

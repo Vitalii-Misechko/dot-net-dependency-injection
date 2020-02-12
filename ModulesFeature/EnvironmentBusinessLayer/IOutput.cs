@@ -7,5 +7,8 @@ namespace EnvironmentBusinessLayer
     public interface IOutput
     {
         void WriteLine(string line);
+
+        string FormatLine( string line );
+
     }
 }
