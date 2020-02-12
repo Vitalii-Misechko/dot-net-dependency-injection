@@ -6,7 +6,7 @@ namespace UnitTests
 {
     public class ConsoleOutputTests {
         [Test]
-        public void FormatLine_UsesEnvironmentSuffix()
+        public void FormatLine_UsesEnvironmentMachineNameSuffix()
         {
             IOutput m_sut = new ConsoleOutput(new TestEnvironment());
 

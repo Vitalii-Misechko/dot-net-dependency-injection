@@ -5,7 +5,7 @@ namespace ModulesFeature
 {
     internal sealed class ConsoleOutput : IOutput
     {
-        private IEnvironment m_environment;
+        private readonly IEnvironment m_environment;
 		
         public ConsoleOutput(IEnvironment environment)
         {
