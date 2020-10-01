@@ -1,6 +1,6 @@
 ﻿using Autofac;
-using BusinessLogic.ConsoleDomain;
-using BusinessLogic.ConsoleDomain.Default;
+using BusinessLogic.OutputDomain;
+using BusinessLogic.OutputDomain.Default;
 
 namespace BusinessLogic
 {

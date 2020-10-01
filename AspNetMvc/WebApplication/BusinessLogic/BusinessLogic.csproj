@@ -66,8 +66,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConsoleDomain\Default\OutputEnvFormatter.cs" />
-    <Compile Include="ConsoleDomain\IOutputEnvFormatter.cs" />
+    <Compile Include="OutputDomain\Default\OutputEnvFormatter.cs" />
+    <Compile Include="OutputDomain\IOutputEnvFormatter.cs" />
     <Compile Include="DependencyModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

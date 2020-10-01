@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace BusinessLogic.ConsoleDomain.Default
+namespace BusinessLogic.OutputDomain.Default
 {
     internal sealed class OutputEnvFormatter : IOutputEnvFormatter
     {
