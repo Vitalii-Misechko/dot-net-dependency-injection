@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Autofac;
@@ -24,16 +20,25 @@ namespace WebApplication
 
         private void SetupDI() 
         {            
+            /*
+             * Autofac documentation https://autofaccn.readthedocs.io/en/latest/integration/mvc.html
+             * 1. Install Autofac
+             *      Install-Package Autofac.Mvc5 -Version 6.0.0
+             * 2. Write the code bellow to register controllers and modules
+             */
+
             var builder = new ContainerBuilder();
 
+            // add a line here if you need to load module
             builder.RegisterModule( new BusinessLogic.DependencyModule() );
 
             // Register controllers all at once using assembly scanning...
             builder.RegisterControllers(typeof(MvcApplication).Assembly);
 
             var container = builder.Build();
-            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
 
+            // This line allows to pass dependency into controllers' constructors
+            DependencyResolver.SetResolver(new AutofacDependencyResolver(container));
         }
     }
 }
