@@ -24,9 +24,17 @@ namespace WebApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices( IServiceCollection services )
         {
+            // 1. Create a new container. 
+            // .Net Core creates container behind the scenes
+
+            // 2. Register dependencies 
             DependencyModule.ConfigureServices( services );
+            //services.AddScoped<IOutputEnvFormatter, OutputEnvFormatter>();
 
             services.AddControllersWithViews();
+
+            // 3. Resolve dependencies
+            // .Net Core resolves dependencies behind the scenes
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
