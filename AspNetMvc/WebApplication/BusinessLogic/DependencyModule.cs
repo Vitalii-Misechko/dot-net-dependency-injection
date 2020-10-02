@@ -9,6 +9,7 @@ namespace BusinessLogic
         protected override void Load( ContainerBuilder builder ) 
         {
             builder.RegisterType<OutputEnvFormatter>().As<IOutputEnvFormatter>();
+            builder.RegisterType<DateProvider>().As<IDateProvider>();
         }
     }
 }

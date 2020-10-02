@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="OutputDomain\Default\DateProvider.cs" />
     <Compile Include="OutputDomain\Default\OutputEnvFormatter.cs" />
     <Compile Include="OutputDomain\IOutputEnvFormatter.cs" />
     <Compile Include="DependencyModule.cs" />
